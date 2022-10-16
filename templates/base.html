@@ -1,0 +1,27 @@
+{% load static %}
+{% load django_bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% bootstrap_messages %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Issue Tracker {% endblock %}</title>
+    <link rel="stylesheet" href="{% static "css/style.css"%}">
+</head>
+<body>
+<nav class="navbar">
+    <div class="container">
+    <ul class="menu">
+        <li><a href="{% url 'index' %}">Home</a> </li>
+        {% block menu %}{% endblock %}
+    </ul>
+    </div>
+</nav>
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>

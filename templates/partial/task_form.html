@@ -1,0 +1,15 @@
+{% csrf_token %}
+<div class="form_row">
+    {% if errors.title %}
+    <p class="error">{{ errors.title }}</p>
+    {% endif %}
+            <label for="title">Title: </label>
+            <input id="title" name="title" type="text" value="{{ task.title }}">
+        </div>
+        <div class="form_row">
+            <label for="description">Description: </label>
+            <input id="description" name="description" type="text" value="{{ task.description }}">
+        </div>
+<div class="form_row">
+    <input  type="submit" value="{{ button_text }}">
+</div>

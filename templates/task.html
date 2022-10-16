@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+    Task - {{ task.title }}
+{% endblock %}
+
+{% block menu %}
+<li>
+    <a href="{% url 'task_add' %}">Add task</a>
+</li>
+{% endblock %}
+
+{% block content %}
+    <p class="fw-bold">Title: {{ task.title }}</p>
+    <p>Description: {{ task.description }}</p>
+{% endblock %}
